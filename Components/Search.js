@@ -1,5 +1,5 @@
 // Components/Search.js
-
+// teste git
 import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItems'
