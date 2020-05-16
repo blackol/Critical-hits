@@ -2,7 +2,7 @@
 
 
 Dans le fichiers Search.js il y a une ligne de code non fonctionnelle fesant bugguer l'application.
-Cette ligne permet dáppeler le vue FilmDetails contenur dans le fichiers FilmsDetails.js
+Cette ligne permet d'appeler le vue FilmDetails contenue dans le fichiers FilmsDetails.js.
 
 
 
@@ -20,5 +20,9 @@ https://reactnavigation.org/docs/getting-started
 
 Le Fichiers App.js est les fichiers principale il appel le fichiers Navigation.js qui gere la navigation entre les vue.
 
-Le fichiers Search.js est la page home de lápplication qui affiche tout les film dans une listes.
+Le fichiers Search.js est la page home de l'application qui affiche tout les film dans une listes.
+
+Chaque critique de film est recuperer via une api  dans le dossier Api et est ensuite mis en forme dans FilmItems.js
+
+Le dossiers FilmDetails contiendra le details du films selectionner.
 
