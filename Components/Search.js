@@ -14,7 +14,7 @@ class Search extends React.Component {
     // Cette commande ci-dessous est non fonctionnel donc si vous avez la solution...
     this.props.navigation.navigate("DetailsScreen")
   }
-
+  
   constructor(props) {
     super(props)
     this.page = 0
@@ -24,7 +24,6 @@ class Search extends React.Component {
       films: [],
       isLoading : false // Affiche temoin de chargement desactiver de base
     }
-    console.log(this.props)
   }
 
   _loadFilms() {
@@ -71,6 +70,7 @@ _searchFilms() {
 
   render() {
     const { film, displayDetailForFilm } = this.props
+    console.log('----------------------------')
     console.log(this.props)
     return (
         <View
