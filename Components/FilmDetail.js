@@ -6,13 +6,9 @@ import { StyleSheet, View, Text } from 'react-native'
 class FilmDetail extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Button
-        title="Go to Details... again"
-        onPress={() => navigation.navigate('Home')}
-      />
-    </View>
+      <View style={styles.main_container}>
+        <Text>Détail du film</Text>
+      </View>
     )
   }
 }

@@ -4,12 +4,15 @@ import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItems'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
-import { color } from 'react-native-reanimated'
+
+
 
 class Search extends React.Component {
-
+ 
   _displayDetailForFilm = (idFilm) => {
     console.log("Display film with id " + idFilm)
+    // Cette commande ci-dessous est non fonctionnel donc si vous avez la solution...
+    this.props.navigation.navigate("DetailsScreen")
   }
 
   constructor(props) {
@@ -21,6 +24,7 @@ class Search extends React.Component {
       films: [],
       isLoading : false // Affiche temoin de chargement desactiver de base
     }
+    console.log(this.props)
   }
 
   _loadFilms() {
@@ -66,8 +70,8 @@ _searchFilms() {
   }
 
   render() {
-    console.log(this.props)
     const { film, displayDetailForFilm } = this.props
+    console.log(this.props)
     return (
         <View
             style={styles.main_container}
