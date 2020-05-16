@@ -9,7 +9,7 @@ Cette ligne permet d'appeler le vue FilmDetails contenue dans le fichiers FilmsD
 Voici le code de ma premiers App ReactNative Utilisant ReactNavigation
 
 Pour lancer ce projets vous aurez besoin :   
--d'un ordinateur avec ReactNative 0.62 et ReactNavigation 5.0
+- d'un ordinateur avec ReactNative 0.62 et ReactNavigation 5.0
 
 https://reactnative.dev/docs/environment-setup
 
