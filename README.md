@@ -26,3 +26,8 @@ Chaque critique de film est recuperer via une api  dans le dossier Api et est en
 
 Le dossiers FilmDetails contiendra le details du films selectionner.
 
+Components :
+- Filmdetail.js
+- FilmItems.js
+- Search.js
+
