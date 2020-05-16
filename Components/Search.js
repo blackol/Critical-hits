@@ -8,6 +8,10 @@ import { color } from 'react-native-reanimated'
 
 class Search extends React.Component {
 
+  _displayDetailForFilm = (idFilm) => {
+    console.log("Display film with id " + idFilm)
+  }
+
   constructor(props) {
     super(props)
     this.page = 0
@@ -62,10 +66,13 @@ _searchFilms() {
   }
 
   render() {
-    console.log("RENDER")
-    console.log(this.state.isLoading)
+    console.log(this.props)
+    const { film, displayDetailForFilm } = this.props
     return (
-      <View style={styles.main_container}>
+        <View
+            style={styles.main_container}
+            onPress={() => displayDetailForFilm(film.id)}
+          > 
         <TextInput
           style={styles.textinput}
           placeholder='Titre du film'
@@ -76,13 +83,15 @@ _searchFilms() {
         <FlatList
           data={this.state.films}
           keyExtractor={(item) => item.id.toString()}
+          
           onEndReachedThreshold={0.5}
           onEndReached={() => {
             if (this.page < this.totalPages) {
               this._loadFilms()
             }
           }}
-          renderItem={({item}) => <FilmItem film={item}/>}
+       
+          renderItem={({item}) => <FilmItem film={item} displayDetailForFilm={this._displayDetailForFilm} />}
         />
         {this._displayLoading()}
       </View>
