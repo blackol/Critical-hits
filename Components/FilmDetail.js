@@ -8,6 +8,11 @@ class FilmDetail extends React.Component {
     return (
       <View style={styles.main_container}>
         <Text>Détail du film</Text>
+
+        <Button
+      title={`Go to ${Home}`}
+      onPress={() => navigation.navigate(Home)}
+    />
       </View>
     )
   }

@@ -1,5 +1,5 @@
 
-
+// Navigation/Navigation.js
 import * as React from 'react';
 import Search from '../Components/Search';
 import FilmDetail from '../Components/FilmDetail';
@@ -8,14 +8,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-function HomeScreen({ navigation }) {
+const HomeScreen =({ navigation }) => {
   return (
     <Search/>
   );
 }
 
 
-function DetailsScreen({ navigation }) {
+
+const DetailsScreen = ({ navigation }) => {
   return (
     <FilmDetail/>
   );

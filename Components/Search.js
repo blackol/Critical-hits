@@ -5,14 +5,14 @@ import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator 
 import FilmItem from './FilmItems'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
 
-
-
 class Search extends React.Component {
+
+   
  
   _displayDetailForFilm = (idFilm) => {
-    console.log("Display film with id " + idFilm)
+    console.log("Display film with id " + idFilm + this )
     // Cette commande ci-dessous est non fonctionnel donc si vous avez la solution...
-    this.props.navigation.navigate("DetailsScreen")
+    this.props.navigation.navigate("Details")
   }
   
   constructor(props) {
@@ -71,7 +71,9 @@ _searchFilms() {
   render() {
     const { film, displayDetailForFilm } = this.props
     console.log('----------------------------')
-    console.log(this.props)
+    console.log(this.props);
+
+    // test si lóbject this.props est null..
     return (
         <View
             style={styles.main_container}
@@ -102,6 +104,7 @@ _searchFilms() {
     )
   }
 }
+
 
 const styles = StyleSheet.create({
   main_container: {
