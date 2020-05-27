@@ -3,14 +3,17 @@
 import * as React from 'react';
 import Search from '../Components/Search';
 import FilmDetail from '../Components/FilmDetail';
-import { View, Text,Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
 
 
 const HomeScreen =({ navigation }) => {
   return (
-    <Search/>
+   
+    <Search navigation={navigation}/>
   );
 }
 
@@ -22,7 +25,7 @@ const DetailsScreen = ({ navigation }) => {
   );
 }
 
-const Stack = createStackNavigator();
+
 
 function Navigation() {
   return (

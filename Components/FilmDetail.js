@@ -1,7 +1,7 @@
 // Components/FilmDetail.js
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
 
 class FilmDetail extends React.Component {
   render() {
@@ -9,10 +9,7 @@ class FilmDetail extends React.Component {
       <View style={styles.main_container}>
         <Text>Détail du film</Text>
 
-        <Button
-      title={`Go to ${Home}`}
-      onPress={() => navigation.navigate(Home)}
-    />
+       
       </View>
     )
   }
