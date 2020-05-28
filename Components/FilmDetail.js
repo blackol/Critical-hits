@@ -7,7 +7,7 @@ class FilmDetail extends React.Component {
   render() {
     return (
       <View style={styles.main_container}>
-        <Text>Détail du film</Text>
+        <Text>Détail du film iyfpi8u7g[9o8ugtp[97gt[9y</Text>
 
        
       </View>
