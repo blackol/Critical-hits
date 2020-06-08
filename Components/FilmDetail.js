@@ -1,15 +1,15 @@
 // Components/FilmDetail.js
 
 import React from 'react'
-import { StyleSheet, View, Text, Button } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 
 class FilmDetail extends React.Component {
   render() {
+    console.log(this.props)
+    const{idFilm} = this.props.navigation.params;
     return (
       <View style={styles.main_container}>
-        <Text>Détail du film iyfpi8u7g[9o8ugtp[97gt[9y</Text>
-
-       
+        <Text>Détail du film ( idFilm {idFilm})</Text>
       </View>
     )
   }
@@ -17,7 +17,7 @@ class FilmDetail extends React.Component {
 
 const styles = StyleSheet.create({
   main_container: {
-    flex: 1,
+    flex: 1
   }
 })
 

@@ -1,7 +1,7 @@
 // Components/Search.js
 
 import React from 'react'
-import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
+import { StyleSheet, View, TextInput, Button, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItems'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
 
@@ -10,13 +10,12 @@ class Search extends React.Component {
    
  
   _displayDetailForFilm = (idFilm) => {
-    //console.log("Display film with id " + idFilm + this )
-    console.log('----------------------opooi-')
-   console.log(this.props)
-    // Cette commande ci-dessous est non fonctionnel donc si vous avez la solution...
-    this.props.navigation.navigate("Details")
-  }
+    console.log("Display film with id " + idFilm),
+    console.log(this.props.navigation),
+    this.props.navigation.navigate("Details", { idFilm: idFilm })
+}
   
+
   constructor(props) {
     super(props)
     this.page = 0
@@ -72,14 +71,12 @@ _searchFilms() {
 
   render() {
     const { film, displayDetailForFilm } = this.props
-    console.log('----------------------------')
-    console.log(this.props);
-
-    // test si lóbject this.props est null..
+    console.log(this.props)
     return (
         <View
             style={styles.main_container}
             onPress={() => displayDetailForFilm(film.id)}
+
           > 
         <TextInput
           style={styles.textinput}
@@ -103,6 +100,7 @@ _searchFilms() {
         />
         {this._displayLoading()}
       </View>
+      
     )
   }
 }

@@ -19,9 +19,9 @@ const HomeScreen =({ navigation }) => {
 
 
 
-const DetailsScreen = ({ navigation }) => {
+const DetailsScreen = ({ route,navigation}) => {
   return (
-    <FilmDetail/>
+    <FilmDetail navigation={navigation, route}/>
   );
 }
 
