@@ -11,7 +11,7 @@ class Search extends React.Component {
  
   _displayDetailForFilm = (idFilm) => {
     console.log("Display film with id " + idFilm),
-    console.log(this.props.navigation),
+    console.log(this.props.navigation ),
     this.props.navigation.navigate("Details", { idFilm: idFilm })
 }
   

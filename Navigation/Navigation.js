@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 
 
 
-const HomeScreen =({ navigation }) => {
+const HomeScreen =({ navigation}) => {
   return (
    
     <Search navigation={navigation}/>

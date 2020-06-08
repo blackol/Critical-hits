@@ -9,7 +9,7 @@ class FilmDetail extends React.Component {
     const{idFilm} = this.props.navigation.params;
     return (
       <View style={styles.main_container}>
-        <Text>Détail du film ( idFilm {idFilm})</Text>
+        <Text>Détail du film (idFilm {idFilm})</Text>
       </View>
     )
   }
