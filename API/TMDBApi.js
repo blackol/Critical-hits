@@ -13,8 +13,8 @@ export function getImageFromApi(name){
   return 'https://image.tmdb.org/t/p/w300' + name
 }
 
-export function getFilmDetailsFromApi(id) {
-  const url = 'https://api.themoviedb.org/3/movie/' + id + '?api_keys' +API_TOKEN + '&language=fr'
+export function getFilmDetailFromApi(ID) {
+  const url = 'https://api.themoviedb.org/3/movie/' + ID + '?api_key=' + API_TOKEN
   return fetch(url)
   .then((response) => response.json())
   .catch((error) => console.error(error))

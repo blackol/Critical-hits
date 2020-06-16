@@ -108,7 +108,7 @@ _searchFilms() {
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,
-    backgroundColor: 'rgb(30, 30, 30)',
+    backgroundColor: 'rgb(0, 0, 0)',
     paddingTop: 3
   },
   textinput: {
