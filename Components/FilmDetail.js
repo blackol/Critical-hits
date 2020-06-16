@@ -1,38 +1,58 @@
 // Components/FilmDetail.js
 
 import React from 'react'
-import { StyleSheet, View, Text,ActivityIndicator } from 'react-native'
+import { StyleSheet, View, ActivityIndicator, Text , ScrollView } from 'react-native'
+import { getFilmDetailsFromApi } from '../API/TMDBApi'
 
 class FilmDetail extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
-      film : undefined,
-      isloading: true
+      film: undefined,
+      isLoading: true
     }
   }
 
+  componentDidMount() {
+    const {ids} = this.props.navigation.params.idFilm
+    getFilmDetailsFromApi(ids).then(data => {
+      this.setState({
+        film: data,
+        isLoading: false
+      })
+    }),
+     console.log(getFilmDetailsFromApi(ids))
+}
+
+  
   _displayLoading() {
     if (this.state.isLoading) {
+      // Si isLoading vaut true, on affiche le chargement à l'écran
       return (
         <View style={styles.loading_container}>
           <ActivityIndicator size='large' />
-          {/* Le component ActivityIndicator possède une propriété size pour définir la taille du visuel de chargement : small ou large. Par défaut size vaut small, on met donc large pour que le chargement soit bien visible */}
         </View>
       )
     }
   }
+  _displayFilm() {
+    if (this.state.film != undefined) {
+      return (
+        <ScrollView style={styles.scrollview_container}>
+          <Text>{this.state.film.status}</Text>
+          {/* Pour l'instant je n'affiche que le titre, je vous laisserais le soin de créer la vue. Après tout vous êtes aussi là pour ça non ? :)*/}
+        </ScrollView>
+      )
+    }
+  }
 
-
-
-
+  
+// rendu de nôtre components
   render() {
-    
-    const{idFilm} = this.props.navigation.params;
     return (
       <View style={styles.main_container}>
         {this._displayLoading()}
+        {this._displayFilm()}
       </View>
     )
   }
@@ -50,6 +70,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  scrollview_container: {
+    flex: 1
   }
 })
 

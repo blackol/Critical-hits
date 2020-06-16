@@ -71,7 +71,6 @@ _searchFilms() {
 
   render() {
     const { film, displayDetailForFilm } = this.props
-    console.log(this.props)
     return (
         <View
             style={styles.main_container}
@@ -113,9 +112,9 @@ const styles = StyleSheet.create({
     paddingTop: 3
   },
   textinput: {
-    marginLeft: 5,
-    marginRight: 5,
-    height: 0,
+    marginLeft: 0,
+    marginRight: 0,
+    height: 40,
     borderColor: '#FFFFFF',
     borderWidth: 1,
     paddingLeft: 5,
